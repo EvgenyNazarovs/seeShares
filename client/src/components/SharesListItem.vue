@@ -5,8 +5,6 @@
     <td>{{share['shareTotal']}}</td>
     <td>{{share['05. price'] | toFixed(2) }}</td>
     <td>{{ share['10. change percent'] | toFixed(2) }}</td>
-    <!-- <td><button>remove</button></td> -->
-    <!-- <ListItemChart v-if="selectedChart"></ListItemChart> -->
 
   </div>
 

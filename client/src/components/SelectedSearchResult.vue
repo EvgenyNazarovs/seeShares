@@ -62,10 +62,6 @@ export default {
 
   .numberInput {
     display: flex;
-    /* flex-direction: row; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* align-content: center; */
   }
 
   .numberInput input{
