@@ -8,7 +8,7 @@
     	<input type="text" value="1" v-model="inputAmount"/>
     	<p class="plus" v-on:click="plus">+</p>
     </div>
-    <button type="button" name="button" @click="bookIt">BookIt</button>
+    <button type="button" name="button" v-on:click="bookIt">BookIt</button>
   </div>
 </template>
 
@@ -35,6 +35,7 @@ export default {
     bookIt() {
       let shareSymbol = this.selectedShare['1. symbol'];
       let newShare = { [shareSymbol]: this.inputAmount };
+      console.log(newShare);
       eventBus.$emit('selected-share', newShare);
     }
   }

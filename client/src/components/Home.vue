@@ -93,15 +93,18 @@ export default {
       const updatedShares = { ...newShare, ...this.userShares };
       this.userShares = updatedShares;
       await UserServices.updateUserData(this.userId, updatedShares);
-      const historicData = await SharesServices.getHistoricSharesData(userShares);
-      const latestData = await SharesServices.getLatestSharesData(userShares);
-      this.listData = latestData.map(({ 'Global Quote': globalQuote }) => globalQuote);
+
+      const historicData = await SharesServices.getHistoricSharesData(newShare);
       await StockchartServices.prepareData(historicData, this.stockChartData, this.latestSharesValue);
       await this.totalValue();
       await this.preparePieChartData();
       await this.openChart();
-      const { 'Global Quote': globalQuote } = latestData[0];
+
+      const newListItem = await SharesServices.getLatestSharesData(newShare);
+      const { 'Global Quote': globalQuote } = newListItem[0];
+      console.log('Global Quote: ', globalQuote);
       this.listData.push(globalQuote);
+
       this.rerenderSharesList();
       this.rerenderPieChart();
       this.rerenderStockChart();
@@ -151,8 +154,8 @@ export default {
       const { _id, ...userShares } = userData[0];
       this.userId = _id;
       this.userShares = userShares;
-      const historicData = await SharesServices.getHistoricSharesData(userShares);
-      const latestData = await SharesServices.getLatestSharesData(userShares);
+      const historicData = await SharesServices.getHistoricSharesData(this.userShares);
+      const latestData = await SharesServices.getLatestSharesData(this.userShares);
       this.listData = latestData.map(({ 'Global Quote': globalQuote }) => globalQuote);
       await StockchartServices.prepareData(historicData, this.stockChartData, this.latestSharesValue);
       await this.totalValue();
