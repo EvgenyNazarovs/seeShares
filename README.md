@@ -1,8 +1,8 @@
 # client
 
 <!-- <p align="center"> -->
-  <image src="https://github.com/alexgyllos/files/blob/master/seeSharesPreview.png" alt="seeShares preview">
-  <image src="https://github.com/alexgyllos/files/blob/master/seeShares%20preview2.png" alt="seeShares preview 2">
+  <image src="https://github.com/EvgenyNazarovs/My-files/blob/master/seeshares-screenshots/seeshares-1.png" width="300 alt="seeShares preview">
+  <image src="https://github.com/EvgenyNazarovs/My-files/blob/master/seeshares-screenshots/seeshares-2.png" width="300" alt="seeShares preview 2">
 <!-- </p> -->
 
 ## Project setup
