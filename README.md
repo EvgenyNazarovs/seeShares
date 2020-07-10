@@ -1,7 +1,7 @@
 # client
 
 <!-- <p align="center"> -->
-  <image src="https://github.com/EvgenyNazarovs/My-files/blob/master/seeshares-screenshots/seeshares-1.png" width="400" margin-right="10px" alt="seeShares preview"><image
+  <image src="https://github.com/EvgenyNazarovs/My-files/blob/master/seeshares-screenshots/seeshares-1.png" width="400" alt="seeShares preview"><image
    src="https://github.com/EvgenyNazarovs/My-files/blob/master/seeshares-screenshots/seeshares-2.png" width="400" alt="seeShares preview 2">
 <!-- </p> -->
 
